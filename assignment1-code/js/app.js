@@ -11,9 +11,12 @@ function LunchCheckController($scope) {
   $scope.message = "";
 
   $scope.checkListOfItems = function () {
-    var list = $scope.listOfItems.split(',');
-    if (list.length <= 3) $scope.message = "Enjoy!";
-    else $scope.message = "Too much!";
+    if ($scope.listOfItems != ""){
+     var list = $scope.listOfItems.split(',');
+     if (list.length <= 3) $scope.message = "Enjoy!";
+     else $scope.message = "Too much!";
+    }
+    else $scope.message = "Please enter data first";
   };
 }
 
